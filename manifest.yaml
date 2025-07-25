@@ -1,0 +1,29 @@
+version: 0.0.1
+type: plugin
+author: ppio
+name: ppio-sandbox
+label:
+  en_US: PPIO Agent Sandbox
+  zh_Hans: PPIO Agent 沙箱
+description:
+  en_US: E2B-compatible, offering a securely isolated environment for running AI-generated code.
+  zh_Hans: 兼容 E2B 接口，提供安全隔离的云端沙箱，用于执行 AI 生成代码
+icon: icon_s_en.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/ppio_sandbox.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-02-10T16:17:18.683538+08:00
+privacy: https://ppio.com/legal/privacy-policy
+verified: false 
