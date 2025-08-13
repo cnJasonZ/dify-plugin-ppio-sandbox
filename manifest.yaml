@@ -6,8 +6,8 @@ label:
   en_US: PPIO Agent Sandbox
   zh_Hans: PPIO Agent 沙箱
 description:
-  en_US: E2B-compatible, offering a securely isolated environment for running AI-generated code.
-  zh_Hans: 兼容 E2B 接口，提供安全隔离的云端沙箱，用于执行 AI 生成代码
+  en_US: E2B-compatible, offering a securely isolated environment for running AI-generated tasks.
+  zh_Hans: 兼容 E2B 接口，提供安全隔离的云端沙箱，用于执行 AI 生成的任务
 icon: icon_s_en.svg
 resource:
   memory: 268435456
