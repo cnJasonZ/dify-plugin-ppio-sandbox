@@ -32,7 +32,7 @@
 
 6. 现在您可以在您的 workflow 中使用 PPIO Agent 沙箱，或者在其他应用中使用。
 
-该插件的源代码：[https://github.com/cnJasonZ/dify-plugin-ppio](https://github.com/cnJasonZ/dify-plugin-ppio)
+该插件的源代码：[https://github.com/cnJasonZ/dify-plugin-ppio-sandbox](https://github.com/cnJasonZ/dify-plugin-ppio-sandbox)
 
 
 ## PPIO Sandbox
@@ -69,4 +69,4 @@ This is a plugin for Dify to integrate with [PPIO Agent Sandbox](https://ppio.co
 
 6. Now you can use the PPIO sandbox tool in your workflow or other apps.
 
-Source code of this plugin: [https://github.com/cnJasonZ/dify-plugin-ppio](https://github.com/cnJasonZ/dify-plugin-ppio)
+Source code of this plugin: [https://github.com/cnJasonZ/dify-plugin-ppio-sandbox](https://github.com/cnJasonZ/dify-plugin-ppio-sandbox)
