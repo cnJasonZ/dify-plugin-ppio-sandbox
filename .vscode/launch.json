@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Dify Plugin",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "main",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "DEBUG": "true",
+                "LOG_LEVEL": "DEBUG"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "args": [],
+            "justMyCode": false,
+            "stopOnEntry": false,
+            "gevent": true
+        }
+    ]
+}
