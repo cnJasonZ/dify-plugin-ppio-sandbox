@@ -58,11 +58,13 @@ jobs:
       - name: Checkout target repo
         uses: actions/checkout@v3
         with:
-          repository: ${{steps.get_basic_info.outputs.author}}/dify-plugins
+          # Use author variable for repository
+          repository: cnJasonZ/dify-plugins
           path: dify-plugins
           token: ${{ secrets.PLUGIN_ACTION }}
-          fetch-depth: 1
-          persist-credentials: true
+          fetch-depth: 1 # Fetch only the last commit to speed up checkout
+          persist-credentials: true # Persist credentials for subsequent git operations
+
 
       - name: Prepare and create PR
         run: |
