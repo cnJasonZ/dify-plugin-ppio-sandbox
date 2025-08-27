@@ -92,14 +92,22 @@ jobs:
           git branch -a
           echo "Waiting for branch to sync..."
           sleep 10  # Wait 10 seconds for branch sync
+          
+          # Verify branch exists on remote
+          BRANCH_NAME="bump-${{ steps.get_basic_info.outputs.plugin_name }}-plugin-${{ steps.get_basic_info.outputs.version }}"
+          git ls-remote --heads origin "$BRANCH_NAME" || {
+            echo "Branch $BRANCH_NAME not found on remote"
+            exit 1
+          }
 
       - name: Create PR via GitHub API
         env:
           GH_TOKEN: ${{ secrets.PLUGIN_ACTION }}
         run: |
+          gh auth status
           gh pr create \
             --repo langgenius/dify-plugins \
-            --head "cnJasonZ:${{ steps.get_basic_info.outputs.plugin_name }}-${{ steps.get_basic_info.outputs.version }}" \
+            --head "cnJasonZ:bump-${{ steps.get_basic_info.outputs.plugin_name }}-plugin-${{ steps.get_basic_info.outputs.version }}" \
             --base main \
             --title "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin to version ${{ steps.get_basic_info.outputs.version }}" \
             --body "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin package to version ${{ steps.get_basic_info.outputs.version }}
